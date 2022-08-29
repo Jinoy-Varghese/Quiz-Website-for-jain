@@ -3,11 +3,8 @@
 margin-top:26vh;
     }
     body{
-        background-image:url("<?php echo base_url("assets/image/bg_maths.png") ?>");
-        
+        background-image:url("<?php echo base_url("assets/image/bg_maths.png") ?>");    
     }
-
-
 </style>
 <div class="container d-flex align-items-center justify-content-center">
     <div class="border shadow row col-6 p-5 d-flex justify-content-center bg-white">

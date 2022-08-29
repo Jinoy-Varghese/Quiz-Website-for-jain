@@ -107,9 +107,7 @@
 
     </div>
 </div>
-<div class=" col-md-2 col-11 float-right mt-1">
-        <video autoplay="true" id="videoElement" class=" col-6 col-md-12"></video>
-    </div> 
+
 <div class="container p-lg-4">
 
     <form class="mt-5 pt-3" method="post" action="<?php echo base_url();?>Exam/submit_answer_process" id="myForm">
@@ -119,17 +117,16 @@
         <?php 
 $i=1;
 
-$this->db->select('*');
-$this->db->from('exam_questions');
-
-$sql=$this->db->get();
+$this->db->order_by('rand()');
+$this->db->limit(5);
+$sql=$this->db->get('exam_questions');
 foreach($sql->result() as $user_data)
 {
 ?>
-        <div class="form-row mt-5 col-12">
+        <div class="form-row mt-5 col-12 fs-4">
 
-            <div><b> <?php echo $i ?>. </b></div>
-            <div class="col-11">
+        <div class="col-11"><b> <?php echo $i ?>. </b>
+            
                 <?php echo $user_data->question; ?>
             </div>
             <div class="col-md-5 ml-4 mt-3 form-check"><input type="radio" name="answer<?php echo $i ?>"
