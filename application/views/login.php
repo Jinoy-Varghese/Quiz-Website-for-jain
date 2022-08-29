@@ -76,7 +76,7 @@ if($this->session->flashdata('invalid_user')){
 
 ?>
 
-<div class="col-12 mt-1 ml-1"><a href="<?php echo base_url('Main/'); ?>"><i class="fas fa-arrow-left"></i></a></div>
+<div class="col-12 mt-2 pl-3">&nbsp;&nbsp;&nbsp;<a href="<?php echo base_url('Main/'); ?>"><i class="fas fa-arrow-left"></i></a></div>
 <?php echo form_open('Main/login_process','class="form-signin text-center"'); ?>
 <div class="mt-5">
       <img class="mb-2" src="<?php echo base_url('assets/image/jain_logo.png'); ?>" alt="" width="170" height="170" />
