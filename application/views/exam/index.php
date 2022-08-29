@@ -4,7 +4,11 @@
     font: normal 13px/20px Arial, Helvetica, sans-serif;
     word-wrap: break-word;
 }
-
+body{
+    background:url("<?php echo base_url("assets/image/exam_bg.pn") ?>");
+    background-attachment: fixed;
+    background-size:cover;
+}
 .countdown-label {
     font: thin 15px Arial, sans-serif;
     color: #65584c;
@@ -96,9 +100,10 @@
 }
 
 </style>
+<div class="col-12 bg-primary text-white h3 p-3"><center>Jain University Inter-Department Quiz Competition<center></div>
 
 
-<div class="timer-body sticky-top float-md-right mr-md-3 mt-md-1">
+<div class="timer-body sticky-topfloat-md-right mt-md-1">
     <input type="hidden" id="set-time" value="1" />
     <div id="countdown">
 
@@ -123,7 +128,7 @@ $sql=$this->db->get('exam_questions');
 foreach($sql->result() as $user_data)
 {
 ?>
-        <div class="form-row mt-5 col-12 fs-4">
+    <div class="form-row mt-5 col-12 fs-4 p-4 shadow">
 
         <div class="col-11"><b> <?php echo $i ?>. </b>
             
@@ -320,65 +325,5 @@ $time=seconds_from_time($time);
         return (n < 10 ? '0' : '') + n;
     }
     </script>
- <!--   remove this comment if this site is hosting in a ssl certified domain. -->
      
-     <script>
-    var video = document.querySelector("#videoElement");
-
-    if (navigator.mediaDevices.getUserMedia) {
-        navigator.mediaDevices.getUserMedia({
-                video: true
-            })
-            .then(function(stream) {
-                video.srcObject = stream;
-            })
-            .catch(function(err0r) {
-                console.log("Something went wrong!");
-            });
-    }
-    </script> 
-    <script>
-//Make the DIV element draggagle:
-dragElement(document.getElementById("videoElement"));
-
-function dragElement(elmnt) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elmnt.id + "header")) {
-    /* if present, the header is where you move the DIV from:*/
-    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-  } else {
-    /* otherwise, move the DIV from anywhere inside the DIV:*/
-    elmnt.onmousedown = dragMouseDown;
-  }
-
-  function dragMouseDown(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // get the mouse cursor position at startup:
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
-  }
-
-  function elementDrag(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // calculate the new cursor position:
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    // set the element's new position:
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-  }
-
-  function closeDragElement() {
-    /* stop moving when mouse button is released:*/
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
-}
-</script>
+     

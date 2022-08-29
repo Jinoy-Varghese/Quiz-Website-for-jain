@@ -28,9 +28,29 @@ class Exam extends CI_Controller
 
   public function index()
   {
-		$this->load->view('header');
-		$this->load->view('/exam/index');
-		$this->load->view('footer'); 
+    $id=$_SESSION['u_id'];
+    $this->db->select('status');
+    $this->db->from('users');
+    $this->db->where('username',$id);
+    $sql=$this->db->get();
+    foreach($sql->result() as $user_data)
+    {
+      $status=$user_data->status;
+    }
+
+
+
+    if($status==1){
+      $this->load->view('header');
+      $this->load->view('/exam/index');
+      $this->load->view('footer');
+    }
+    else{
+      $this->load->view('header');
+      $this->load->view('/exam/exam_finish');
+      $this->load->view('footer'); 
+    }
+ 
    }
   public function exam_finish()
    {
@@ -46,8 +66,6 @@ class Exam extends CI_Controller
 
 
    $limit=$this->input->post('limit')-1;
-
-
    $mark=0;
    for($i=1;$i<=$limit;$i++)
    {
@@ -74,7 +92,10 @@ class Exam extends CI_Controller
     $exam_data=array('userid'=>$id,'marks'=>$my_mark);
     $this->db->insert('exam_marks',$exam_data);
 
-    $this->session->set_flashdata('insert_success',"Sucessfully inserted");
+    $array = array('status' => 0);
+    $this->db->set($array);
+    $this->db->where('username',$id);
+    $this->db->update('users');
     redirect('Exam/exam_finish','refresh');
 
  }
