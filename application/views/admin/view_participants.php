@@ -65,7 +65,7 @@ if($this->session->flashdata('insert_failed')){
             <th data-field="dob" data-sortable="true">Id</th>
 			<th data-field="name" data-sortable="true">Name</th>
 			<th data-field="email" data-sortable="true">Email</th>
-			<th data-field="Status" data-sortable="true">Marks</th>
+			<th data-field="Status" data-sortable="true">Status</th>
 		</tr>
   </thead>
 	<tbody>
