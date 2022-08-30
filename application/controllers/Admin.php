@@ -32,6 +32,18 @@ class Admin extends CI_Controller
 		$this->load->view('/admin/index');
 		$this->load->view('footer');
   }
+  public function view_marks()
+  {
+    $this->load->view('header');
+		$this->load->view('/admin/view_marks');
+		$this->load->view('footer');
+  }
+  public function view_participants()
+  {
+    $this->load->view('header');
+		$this->load->view('/admin/view_participants');
+		$this->load->view('footer');
+  }
 
 }
 
