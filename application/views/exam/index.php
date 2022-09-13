@@ -138,8 +138,10 @@ foreach($sql->result() as $user_data)
             <?php 
             $str='assets/image/q_pic/';
 
-            if( $user_data->pic !=NULL || !strcmp($user_data->pic,$str))
+            if( $user_data->pic ==NULL || $str==$user_data->pic)
             {
+            }
+            else{
                 ?>
                 <div class="col-4 p-5">
                     <img src="<?php echo base_url($user_data->pic); ?>" alt="" style="max-width:40vw;height:auto;">
