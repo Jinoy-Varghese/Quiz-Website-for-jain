@@ -134,6 +134,20 @@ foreach($sql->result() as $user_data)
             
                 <?php echo $user_data->question; ?>
             </div>
+
+            <?php 
+            $str='assets/image/q_pic/';
+
+            if( $user_data->pic !=NULL || !strcmp($user_data->pic,$str))
+            {
+                ?>
+                <div class="col-4 p-5">
+                    <img src="<?php echo base_url($user_data->pic); ?>" alt="" style="max-width:40vw;height:auto;">
+                </div>
+           
+            <?php
+            }
+            ?>
             <div class="col-md-5 ml-4 mt-3 form-check"><input type="radio" name="answer<?php echo $i ?>"
                     class="form-check-input" value="a" id="optiona<?php echo $i ?>"><label class="form-check-label"
                     for="optiona<?php echo $i ?>"><?php echo $user_data->option_a ?></label></div>
@@ -233,7 +247,7 @@ foreach($sql->result() as $user_data)
             if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !
                 document
                 .msFullscreenElement) {
-               document.getElementById("myForm").submit();
+               //1 document.getElementById("myForm").submit();
             }
         }
     });
@@ -328,7 +342,7 @@ $time=seconds_from_time($time);
     </script>
     <script>
         $(window).blur(function(){
-            document.getElementById("myForm").submit();
+           //2 document.getElementById("myForm").submit();
         });
     </script>
      
