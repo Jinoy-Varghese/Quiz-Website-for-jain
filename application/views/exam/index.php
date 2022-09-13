@@ -5,7 +5,7 @@
     word-wrap: break-word;
 }
 body{
-    background:url("<?php echo base_url("assets/image/exam_bg.pn") ?>");
+    background:#eee;
     background-attachment: fixed;
     background-size:cover;
 }
@@ -103,7 +103,7 @@ body{
 <div class="col-12 bg-primary text-white h3 p-3"><center>Jain University Inter-Department Quiz Competition<center></div>
 
 
-<div class="timer-body sticky-topfloat-md-right mt-md-1">
+<div class="timer-body sticky-top mt-md-1 " style="float:right">
     <input type="hidden" id="set-time" value="1" />
     <div id="countdown">
 
@@ -128,7 +128,7 @@ $sql=$this->db->get('exam_questions');
 foreach($sql->result() as $user_data)
 {
 ?>
-    <div class="form-row mt-5 col-12 fs-4 p-4 shadow">
+    <div class="form-row mt-5 col-12 fs-4 p-4 shadow" style="background:white;">
 
         <div class="col-11"><b> <?php echo $i ?>. </b>
             
@@ -175,7 +175,7 @@ foreach($sql->result() as $user_data)
 
 
         <div class="form-row mt-5">
-            <input class="btn btn-primary ml-1 ml-md-3 mb-2" type="submit" name="u_reg" value="Submit Answers">
+            <input class="btn btn-primary ml-1 ml-md-3 mb-2 col-12" type="submit" name="u_reg" value="Submit Answers">
         </div>
         <input type="hidden" name="limit" value="<?php echo $i; ?>">
 
