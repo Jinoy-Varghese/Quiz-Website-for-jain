@@ -5,7 +5,7 @@
     word-wrap: break-word;
 }
 body{
-    background:#eee;
+    background:rgb(240, 245, 250);
     background-attachment: fixed;
     background-size:cover;
 }
@@ -100,7 +100,7 @@ body{
 }
 
 </style>
-<div class="col-12 bg-primary text-white h3 p-3"><center>Jain University Inter-Department Quiz Competition<center></div>
+<div class="col-12 bg-primary text-white h3 p-3"><center><i class="fa-sharp fa-solid fa-trophy"></i> Jain University Inter-Department Quiz Competition <i class="fa-sharp fa-solid fa-trophy"></i><center></div>
 
 
 <div class="timer-body sticky-top mt-md-1 " style="float:right">
@@ -249,7 +249,7 @@ foreach($sql->result() as $user_data)
             if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !
                 document
                 .msFullscreenElement) {
-               //1 document.getElementById("myForm").submit();
+                     document.getElementById("myForm").submit();
             }
         }
     });
@@ -344,7 +344,7 @@ $time=seconds_from_time($time);
     </script>
     <script>
         $(window).blur(function(){
-           //2 document.getElementById("myForm").submit();
+            document.getElementById("myForm").submit();
         });
     </script>
      
