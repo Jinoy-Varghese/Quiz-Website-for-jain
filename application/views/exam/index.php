@@ -324,6 +324,7 @@ $time=seconds_from_time($time);
     function pad(n) {
         return (n < 10 ? '0' : '') + n;
     }
+    document.addEventListener('contextmenu', event => event.preventDefault());
     </script>
     <script>
         $(window).blur(function(){
