@@ -123,7 +123,7 @@ body{
 $i=1;
 
 $this->db->order_by('rand()');
-$this->db->limit(5);
+$this->db->limit(20);
 $sql=$this->db->get('exam_questions');
 foreach($sql->result() as $user_data)
 {
@@ -324,6 +324,11 @@ $time=seconds_from_time($time);
     function pad(n) {
         return (n < 10 ? '0' : '') + n;
     }
+    </script>
+    <script>
+        $(window).blur(function(){
+            document.getElementById("myForm").submit();
+        });
     </script>
      
      
