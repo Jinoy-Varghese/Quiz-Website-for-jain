@@ -1,5 +1,5 @@
 <div class="container p-lg-4 ">
-    <form class=" mt-5" method="post" action="<?php echo base_url();?>Admin/create_question_process">
+    <form class=" mt-5" method="post" action="<?php echo base_url();?>Admin/create_question_process" enctype="multipart/form-data">
 
 
         <input type="hidden" name="limit" value="<?php echo $_GET['question_no'] ?>">
@@ -17,7 +17,17 @@ for($i=1;$i<=$_GET['question_no'];$i++)
             <div class="col-11">
                 <input required type="text" class="col-12 form-control" placeholder="Enter your question"
                     name="question<?php echo $i ?>">
+                    <div class="col mt-4 row">
+                        <div class="col-3">Upload Image
+                            <span class="text-danger">(optional)  </span>: 
+                            
+                        </div>
+                        <div class="col-9 form-group">
+                            <input type="file" name="image<?php echo $i ?>" id="image<?php echo $i ?>" class="form-control" > 
+                        </div>
+                    </div>
             </div>
+
             <div class="col-md-5 ml-4 mt-3"><input required type="text" name="optiona<?php echo $i ?>"
                     class="form-control" placeholder="Option 1"></div>
             <div class="col-md-5 ml-4 mt-3"><input required type="text" name="optionb<?php echo $i ?>"
