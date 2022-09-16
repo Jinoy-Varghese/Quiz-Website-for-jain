@@ -83,8 +83,13 @@ class Admin extends CI_Controller
        $o_optiond=$this->input->post($optiond);
        $o_answer=$this->input->post($answer);
 
+      $imgc="image".$i;
 
-       $exam_data=array('question'=>$o_question,'option_a'=>$o_optiona,'option_b'=>$o_optionb,'option_c'=>$o_optionc,'option_d'=>$o_optiond,'answer'=>$o_answer,'time'=>$time);
+       $image = $_FILES[$imgc]['name'];
+       $target = "assets/image/q_pic/".basename($image);
+       move_uploaded_file($_FILES[$imgc]['tmp_name'], $target);
+
+       $exam_data=array('question'=>$o_question,'option_a'=>$o_optiona,'option_b'=>$o_optionb,'option_c'=>$o_optionc,'option_d'=>$o_optiond,'answer'=>$o_answer,'time'=>$time,'pic'=>$target);
        $this->db->insert('exam_questions',$exam_data);
     }
     $this->session->set_flashdata('insert_success',"Sucessfully inserted");

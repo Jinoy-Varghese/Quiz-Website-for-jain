@@ -5,7 +5,7 @@
     word-wrap: break-word;
 }
 body{
-    background:url("<?php echo base_url("assets/image/exam_bg.pn") ?>");
+    background:rgb(240, 245, 250);
     background-attachment: fixed;
     background-size:cover;
 }
@@ -100,10 +100,10 @@ body{
 }
 
 </style>
-<div class="col-12 bg-primary text-white h3 p-3"><center>Jain University Inter-Department Quiz Competition<center></div>
+<div class="col-12 bg-primary text-white h3 p-3"><center><i class="fa-sharp fa-solid fa-trophy"></i> Jain University Inter-Department Quiz Competition <i class="fa-sharp fa-solid fa-trophy"></i><center></div>
 
 
-<div class="timer-body sticky-topfloat-md-right mt-md-1">
+<div class="timer-body sticky-top mt-md-1 " style="float:right">
     <input type="hidden" id="set-time" value="1" />
     <div id="countdown">
 
@@ -123,17 +123,33 @@ body{
 $i=1;
 
 $this->db->order_by('rand()');
-$this->db->limit(5);
+$this->db->limit(20);
 $sql=$this->db->get('exam_questions');
 foreach($sql->result() as $user_data)
 {
 ?>
-    <div class="form-row mt-5 col-12 fs-4 p-4 shadow">
+    <div class="form-row mt-5 col-12 fs-4 p-4 shadow" style="background:white;">
 
         <div class="col-11"><b> <?php echo $i ?>. </b>
             
                 <?php echo $user_data->question; ?>
             </div>
+
+            <?php 
+            $str='assets/image/q_pic/';
+
+            if( $user_data->pic ==NULL || $str==$user_data->pic)
+            {
+            }
+            else{
+                ?>
+                <div class="col-4 p-5">
+                    <img src="<?php echo base_url($user_data->pic); ?>" alt="" style="max-width:40vw;height:auto;">
+                </div>
+           
+            <?php
+            }
+            ?>
             <div class="col-md-5 ml-4 mt-3 form-check"><input type="radio" name="answer<?php echo $i ?>"
                     class="form-check-input" value="a" id="optiona<?php echo $i ?>"><label class="form-check-label"
                     for="optiona<?php echo $i ?>"><?php echo $user_data->option_a ?></label></div>
@@ -159,7 +175,7 @@ foreach($sql->result() as $user_data)
 
 
         <div class="form-row mt-5">
-            <input class="btn btn-primary ml-1 ml-md-3 mb-2" type="submit" name="u_reg" value="Submit Answers">
+            <input class="btn btn-primary ml-1 ml-md-3 mb-2 col-12" type="submit" name="u_reg" value="Submit Answers">
         </div>
         <input type="hidden" name="limit" value="<?php echo $i; ?>">
 
@@ -233,7 +249,7 @@ foreach($sql->result() as $user_data)
             if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !
                 document
                 .msFullscreenElement) {
-               document.getElementById("myForm").submit();
+                     document.getElementById("myForm").submit();
             }
         }
     });
@@ -324,6 +340,12 @@ $time=seconds_from_time($time);
     function pad(n) {
         return (n < 10 ? '0' : '') + n;
     }
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
+    <script>
+        $(window).blur(function(){
+            document.getElementById("myForm").submit();
+        });
     </script>
      
      
