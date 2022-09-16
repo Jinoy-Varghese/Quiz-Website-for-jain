@@ -84,6 +84,7 @@
 	
 	body {
 		overflow-x: hidden;
+		overflow-y: hidden;
 		max-width: 100%;
 		bbackground: rgb(255,240,163);
 background: linear-gradient(130deg, rgba(255,240,163,1) 0%, rgba(254,175,238,1) 63%, rgba(255,118,254,1) 100%);
@@ -112,8 +113,8 @@ background: linear-gradient(130deg, rgba(255,240,163,1) 0%, rgba(254,175,238,1) 
 		background: blue; 
 		border: 1px solid rgba(247, 249, 249, 0.4);
 		background: rgb(255,240,163);
-background: linear-gradient(130deg, rgba(255,240,163,1) 34%, rgba(255,118,254,1) 100%);
-  box-shadow: 3px 2px 5px #a6acaf;
+		background: linear-gradient(130deg, rgba(255,240,163,1) 34%, rgba(255,118,254,1) 100%);
+  		box-shadow: 3px 2px 5px #a6acaf;
 	}
 
 
