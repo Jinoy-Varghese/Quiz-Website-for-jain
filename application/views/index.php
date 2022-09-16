@@ -86,8 +86,8 @@
 		overflow-x: hidden;
 		overflow-y: hidden;
 		max-width: 100%;
-		bbackground: rgb(255,240,163);
-background: linear-gradient(130deg, rgba(255,240,163,1) 0%, rgba(254,175,238,1) 63%, rgba(255,118,254,1) 100%);
+		background: rgb(255,240,163);
+		background: linear-gradient(130deg, rgba(255,240,163,1) 0%, rgba(254,175,238,1) 63%, rgba(255,118,254,1) 100%);
 	}
 
 	.btn {
