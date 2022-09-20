@@ -123,7 +123,7 @@ body{
 $i=1;
 
 $this->db->order_by('rand()');
-$this->db->limit(20);
+$this->db->limit(50);
 $sql=$this->db->get('exam_questions');
 foreach($sql->result() as $user_data)
 {
