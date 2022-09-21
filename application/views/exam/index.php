@@ -207,9 +207,7 @@ foreach($sql->result() as $user_data)
                     <li>There is no negative marking.</li><br>
                     <li>Stick to the time limit!.</li><br>
                     <li>The quiz will be invigilated and any attempt of malpractice will lead to direct disqualification.</li><br>
-                    <li>If you face any technical issue during the exam,please refer to the FAQ Document. If
-                        not resolved, then contact your placement coordinator via email/call/message from
-                        another device.</li><br>
+                    <li>If you face any technical issue during the exam, then contact your quiz coordinator.</li><br>
                     <li>Student should not indulge in any malpractice while writing the exam. Any misconduct
                         observed by the proctor will be recorded and filed against you, which may lead to suitable
                         disciplinary action.</li><br>
