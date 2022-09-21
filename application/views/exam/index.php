@@ -202,12 +202,11 @@ foreach($sql->result() as $user_data)
                 </div>
                 <div class="modal-body" style="overflow-y:scroll;height:60vh">
                     <ul>
-                    <li>Please sit in a quiet room with no background noise or people around.</li><br>
-                    <li>Ensure proper lighting in the room — Source of light must not be behind you.</li><br>
-                    <li>Please ensure the wall behind you has a plain background with no objects hanging on it.</li><br>
-                    <li>Plan to start your system on the test day 15 minutes before the scheduled time. Start
-                        Exam on time, you will not be allowed to appear after the scheduled time.</li><br>
-                    <li>For the entire duration of the exam, please remain seated in front of your webcam.</li><br>
+                    <li>Please refrain from pressing Alt + Tab, Escape/Power button and also refreshing the page at any point of test. Doing so will end the test on spot.</li><br>
+                    <li>The test can be attempted only once.</li><br>
+                    <li>There is no negative marking.</li><br>
+                    <li>Stick to the time limit!.</li><br>
+                    <li>The quiz will be invigilated and any attempt of malpractice will lead to direct disqualification.</li><br>
                     <li>If you face any technical issue during the exam,please refer to the FAQ Document. If
                         not resolved, then contact your placement coordinator via email/call/message from
                         another device.</li><br>
