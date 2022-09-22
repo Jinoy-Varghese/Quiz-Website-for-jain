@@ -63,19 +63,19 @@ class Exam extends CI_Controller
   {
 
    $id=$_SESSION['u_id'];
-
+    
 
    $limit=$this->input->post('limit')-1;
    $mark=0;
    for($i=1;$i<=$limit;$i++)
    {
-      
+      $idc='idc'.$i;
+      $o_id=$this->input->post($idc);
       $answer='answer'.$i;
       $o_answer=$this->input->post($answer);
-
       $this->db->select('*');
       $this->db->from('exam_questions');
-      $this->db->where('id',$i);
+      $this->db->where('id',$o_id);
       $sql=$this->db->get();
       foreach($sql->result() as $exam_check)
       {
@@ -83,11 +83,12 @@ class Exam extends CI_Controller
         {
           $mark++;
         }
-      }
+      } 
+
       
 
     }
-    $my_mark=($mark*10)/$limit;
+    $my_mark=$mark;
 
     $exam_data=array('userid'=>$id,'marks'=>$my_mark);
     $this->db->insert('exam_marks',$exam_data);
@@ -96,7 +97,7 @@ class Exam extends CI_Controller
     $this->db->set($array);
     $this->db->where('username',$id);
     $this->db->update('users');
-    redirect('Exam/exam_finish','refresh');
+    redirect('exam/exam_finish','refresh');
 
  }
  public function logout()

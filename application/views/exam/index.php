@@ -164,7 +164,7 @@ foreach($sql->result() as $user_data)
                     for="optiond<?php echo $i ?>"><?php echo $user_data->option_d ?></label></div>
         </div>
 
-
+            <input type="hidden" name="idc<?php echo $i; ?>" value="<?php echo $user_data->id; ?>">
         <?php
         $i++;
 }
