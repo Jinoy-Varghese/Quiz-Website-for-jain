@@ -151,16 +151,16 @@ foreach($sql->result() as $user_data)
             }
             ?>
             <div class="col-md-5 ml-4 mt-3 form-check"><input type="radio" name="answer<?php echo $i ?>"
-                    class="form-check-input" value="a" id="optiona<?php echo $i ?>"><label class="form-check-label"
+                    class="form-check-input" value="A" id="optiona<?php echo $i ?>"><label class="form-check-label"
                     for="optiona<?php echo $i ?>"><?php echo str_replace(array('<','<'),array('&lt;','&gt;'),$user_data->option_a); ?></label></div>
             <div class="col-md-5 ml-4 mt-3 form-check"><input type="radio" name="answer<?php echo $i ?>"
-                    class="form-check-input" value="b" id="optionb<?php echo $i ?>"><label class="form-check-label"
+                    class="form-check-input" value="B" id="optionb<?php echo $i ?>"><label class="form-check-label"
                     for="optionb<?php echo $i ?>"><?php echo str_replace(array('<','<'),array('&lt;','&gt;'),$user_data->option_b); ?></label></div>
             <div class="col-md-5 ml-4 mt-3 form-check"><input type="radio" name="answer<?php echo $i ?>"
-                    class="form-check-input" value="c" id="optionc<?php echo $i ?>"><label class="form-check-label"
+                    class="form-check-input" value="C" id="optionc<?php echo $i ?>"><label class="form-check-label"
                     for="optionc<?php echo $i ?>"><?php echo str_replace(array('<','<'),array('&lt;','&gt;'),$user_data->option_c); ?></label></div>
             <div class="col-md-5 ml-4 mt-3 form-check"><input type="radio" name="answer<?php echo $i ?>"
-                    class="form-check-input" value="d" id="optiond<?php echo $i ?>"><label class="form-check-label"
+                    class="form-check-input" value="D" id="optiond<?php echo $i ?>"><label class="form-check-label"
                     for="optiond<?php echo $i ?>"><?php echo str_replace(array('<','<'),array('&lt;','&gt;'),$user_data->option_d); ?></label></div>
         </div>
 
