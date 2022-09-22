@@ -62,7 +62,6 @@ if($this->session->flashdata('insert_failed')){
   <thead class="table-primary">
 		<tr>
 			<th data-field="state" data-checkbox="true"></th>
-			<th data-field="name" data-sortable="true">Name</th>
 			<th data-field="email" data-sortable="true">Email</th>
 			<th data-field="phone" data-sortable="true">Marks</th>
 			<th data-field="dob" data-sortable="true">Time</th>
@@ -76,7 +75,6 @@ if($this->session->flashdata('insert_failed')){
     ?>
 		<tr>
 			<td class="bs-checkbox"><input data-index="<?php echo $student->id ?>" name="btSelectItem" type="checkbox"></td>
-			<td><?php echo $student->name ?></td>
 			<td><?php echo $student->username ?></td>
 			<td><?php echo $student->marks ?></td>
             <td><?php echo $student->time ?></td>
