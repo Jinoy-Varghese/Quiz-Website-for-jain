@@ -42,10 +42,10 @@ for($i=1;$i<=$_GET['question_no'];$i++)
                 <select required type="text" class="col-12 form-control" style="height:35px;"
                     name="answer<?php echo $i ?>">
                     <option disabled selected>select</option>
-                    <option value="a">Option 1</option>
-                    <option value="b">Option 2</option>
-                    <option value="c">Option 3</option>
-                    <option value="d">Option 4</option>
+                    <option value="A">Option 1</option>
+                    <option value="B">Option 2</option>
+                    <option value="C">Option 3</option>
+                    <option value="D">Option 4</option>
                 </select>
             </div>
         </div>
