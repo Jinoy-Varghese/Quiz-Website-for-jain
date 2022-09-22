@@ -13,8 +13,9 @@
 	<div class=" col-md-4 px-3 boximg">
 		<img class="img rounded float-start mt-5 pt-4 me-5 pe-5" src="<?php echo base_url('assets/image/brain.png'); ?> " />
 		<div class="row me-3 pe-3 pt-4">
-		<button type="button" class="btn btn-primary "><a style="color:white; text-align: center;
- 					 text-decoration: none;  " href="<?php echo base_url('Main/login'); ?>">Go to Login</a></button>
+		
+		<a style="color:white; text-align: center;
+ 					 text-decoration: none;  " href="<?php echo base_url('Main/login'); ?>"><button type="button" class="btn btn-primary ">Go to Login</button></a>
 		</div>
 		
 
