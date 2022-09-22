@@ -132,7 +132,7 @@ foreach($sql->result() as $user_data)
 
         <div class="col-11"><b> <?php echo $i ?>. </b>
             
-                <?php echo $user_data->question; ?>
+                <?php echo str_replace(array('<','<'),array('&lt;','&gt;'),$user_data->question); ?>
             </div>
 
             <?php 
@@ -152,16 +152,16 @@ foreach($sql->result() as $user_data)
             ?>
             <div class="col-md-5 ml-4 mt-3 form-check"><input type="radio" name="answer<?php echo $i ?>"
                     class="form-check-input" value="a" id="optiona<?php echo $i ?>"><label class="form-check-label"
-                    for="optiona<?php echo $i ?>"><?php echo $user_data->option_a ?></label></div>
+                    for="optiona<?php echo $i ?>"><?php echo str_replace(array('<','<'),array('&lt;','&gt;'),$user_data->option_a); ?></label></div>
             <div class="col-md-5 ml-4 mt-3 form-check"><input type="radio" name="answer<?php echo $i ?>"
                     class="form-check-input" value="b" id="optionb<?php echo $i ?>"><label class="form-check-label"
-                    for="optionb<?php echo $i ?>"><?php echo $user_data->option_b ?></label></div>
+                    for="optionb<?php echo $i ?>"><?php echo str_replace(array('<','<'),array('&lt;','&gt;'),$user_data->option_b); ?></label></div>
             <div class="col-md-5 ml-4 mt-3 form-check"><input type="radio" name="answer<?php echo $i ?>"
                     class="form-check-input" value="c" id="optionc<?php echo $i ?>"><label class="form-check-label"
-                    for="optionc<?php echo $i ?>"><?php echo $user_data->option_c ?></label></div>
+                    for="optionc<?php echo $i ?>"><?php echo str_replace(array('<','<'),array('&lt;','&gt;'),$user_data->option_c); ?></label></div>
             <div class="col-md-5 ml-4 mt-3 form-check"><input type="radio" name="answer<?php echo $i ?>"
                     class="form-check-input" value="d" id="optiond<?php echo $i ?>"><label class="form-check-label"
-                    for="optiond<?php echo $i ?>"><?php echo $user_data->option_d ?></label></div>
+                    for="optiond<?php echo $i ?>"><?php echo str_replace(array('<','<'),array('&lt;','&gt;'),$user_data->option_d); ?></label></div>
         </div>
 
             <input type="hidden" name="idc<?php echo $i; ?>" value="<?php echo $user_data->id; ?>">
