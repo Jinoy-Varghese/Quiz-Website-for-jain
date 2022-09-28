@@ -5,7 +5,7 @@
     word-wrap: break-word;
 }
 body{
-    background:rgb(240, 245, 250);
+    background-image:url("<?php echo base_url("assets/image/bg_maths.png") ?>");   
     background-attachment: fixed;
     background-size:cover;
 }
@@ -18,6 +18,10 @@ body{
     letter-spacing: 2px;
     margin-top: 9px
 }
+.btn {
+		background-color: #001C54;
+		font-weight: bold;
+	}
 
 #countdown {
     box-shadow: 0 1px 2px 0 rgba(1, 1, 1, 0.4);
@@ -100,7 +104,7 @@ body{
 }
 
 </style>
-<div class="col-12 bg-primary text-white h3 p-3"><center><i class="fa-sharp fa-solid fa-trophy"></i> Jain University Inter-Department Quiz Competition <i class="fa-sharp fa-solid fa-trophy"></i><center></div>
+<div class="col-12  text-white h3 p-3" style="background-color: #001C54;"><center><i class="fa-sharp fa-solid fa-trophy"></i> Jain University Inter-Department Quiz Competition <i class="fa-sharp fa-solid fa-trophy"></i><center></div>
 
 
 <div class="timer-body sticky-top mt-md-1 " style="float:right">
@@ -217,7 +221,7 @@ foreach($sql->result() as $user_data)
                     </ul>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Accept</button>
+                    <button type="button" class="btn"style="background-color: #001C54;color:white;" data-bs-dismiss="modal">Accept</button>
                 </div>
             </div>
         </div>
