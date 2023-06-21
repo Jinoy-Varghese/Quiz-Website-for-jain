@@ -1,2 +1,2 @@
 # Quiz-Website-for-jain
-A Quiz application for competitions for Jain University
+A Quiz application for competitions in Jain University
